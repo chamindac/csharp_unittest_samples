@@ -28,4 +28,11 @@ public class PrimeServiceTests
         bool result = _primeService.IsPrime(input);
         Assert.False(result, $"{input} should not be prime.");
     }
+
+    [Fact]
+    public void IsPrime_InputIs2_RetrunTrue()
+    {
+        bool result = _primeService.IsPrime(2);
+        Assert.True(result, "2 should be prime.");
+    }
 }
