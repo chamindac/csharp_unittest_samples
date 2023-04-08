@@ -19,4 +19,13 @@ public class PrimeServiceTests
         bool result = _primeService.IsPrime(1);
         Assert.IsFalse(result, "1 should not be prime.");
     }
+
+    [TestCase(-1)]
+    [TestCase(0)]
+    [TestCase(1)]
+    public void IsPrime_InputLessThan2_RetrunFalse(int input)
+    {
+        bool result = _primeService.IsPrime(input);
+        Assert.IsFalse(result, $"{input} should not be prime.");
+    }
 }

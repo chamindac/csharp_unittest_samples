@@ -18,4 +18,14 @@ public class PrimeServiceTests
         bool result = _primeService.IsPrime(1);
         Assert.False(result, "1 should not be prime.");
     }
+
+    [Theory]
+    [InlineData(-1)]
+    [InlineData(0)]
+    [InlineData(1)]
+    public void IsPrime_InputLessThan2_RetrunFalse(int input)
+    {
+        bool result = _primeService.IsPrime(input);
+        Assert.False(result, $"{input} should not be prime.");
+    }
 }
