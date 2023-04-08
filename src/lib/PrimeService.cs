@@ -64,6 +64,7 @@ public class PrimeService
                 if (num % i == 0)
                 {
                     isPrime = false;
+                    break;
                 }
             }
             return isPrime;
