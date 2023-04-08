@@ -68,6 +68,5 @@ public class PrimeService
             }
             return isPrime;
         }
-        throw new NotImplementedException("Please write test first");
     }
 }
